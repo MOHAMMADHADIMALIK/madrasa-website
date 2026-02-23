@@ -2285,13 +2285,29 @@ img {
     :root {
         --fs-5xl: 2.5rem;
         --fs-4xl: 2rem;
-        --fs-3xl: 1.75rem;
-        --fs-2xl: 1.4rem;
-        --header-height: 70px;
+        --fs-3xl: 1.6rem;
+        --fs-2xl: 1.35rem;
+        --fs-xl: 1.25rem;
+        --header-height: 65px;
+        --spacing-2xl: 3.5rem;
+        --spacing-3xl: 5rem;
     }
 
     .section {
-        padding: var(--spacing-xl) 0;
+        padding: var(--spacing-2xl) 0;
+    }
+
+    .section__header {
+        margin-bottom: var(--spacing-xl);
+    }
+
+    .section__title {
+        font-size: var(--fs-2xl);
+    }
+
+    .section__description {
+        font-size: var(--fs-sm);
+        max-width: 100%;
     }
 
     /* ========== Premium Mobile Nav ========== */
@@ -2430,23 +2446,69 @@ img {
     }
 
     /* ========== Hero Mobile ========== */
+    .hero {
+        align-items: flex-start;
+        min-height: auto;
+    }
+
+    .hero__content {
+        padding: calc(var(--header-height) + 2.5rem) 1rem 2.5rem;
+    }
+
+    .hero__badge {
+        font-size: var(--fs-sm);
+        margin-bottom: var(--spacing-sm);
+        letter-spacing: 1px;
+    }
+
+    .hero__title {
+        margin-bottom: var(--spacing-sm);
+    }
+
+    .hero__title-line {
+        font-size: var(--fs-3xl);
+    }
+
+    .hero__title-sub {
+        font-size: var(--fs-lg);
+        margin-top: 0.25rem;
+        letter-spacing: 2px;
+    }
+
+    .hero__description {
+        font-size: var(--fs-sm);
+        max-width: 100%;
+        margin-bottom: var(--spacing-md);
+        line-height: 1.6;
+    }
+
     .hero__actions {
         flex-direction: column;
-        gap: 0.75rem;
+        gap: 0.6rem;
+        margin-bottom: var(--spacing-lg);
+    }
+
+    .hero__actions .btn {
+        width: 100%;
+        justify-content: center;
+        padding: 0.75rem 1.5rem;
+        font-size: var(--fs-xs);
     }
 
     .hero__stats {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
-        gap: 1rem;
+        gap: 0.5rem;
+        width: 100%;
     }
 
     .stat {
         background: rgba(255, 255, 255, 0.06);
         backdrop-filter: blur(10px);
-        padding: 0.75rem 0.5rem;
-        border-radius: var(--radius-md);
+        padding: 0.65rem 0.3rem;
+        border-radius: var(--radius-sm);
         border: 1px solid rgba(255, 255, 255, 0.08);
+        text-align: center;
     }
 
     .stat__divider {
@@ -2454,17 +2516,80 @@ img {
     }
 
     .stat__number {
-        font-size: var(--fs-2xl);
+        font-size: var(--fs-xl);
+    }
+
+    .stat__plus {
+        font-size: var(--fs-base);
+    }
+
+    .stat__label {
+        font-size: 0.6rem;
+        letter-spacing: 1px;
+        margin-top: 0.15rem;
     }
 
     .hero__scroll {
         display: none;
     }
 
-    /* Founder */
+    /* ========== About Mobile ========== */
+    .about__grid {
+        grid-template-columns: 1fr;
+        gap: var(--spacing-lg);
+    }
+
+    .about__heading {
+        font-size: var(--fs-xl);
+    }
+
+    .about__text {
+        font-size: var(--fs-sm);
+        line-height: 1.7;
+    }
+
+    .about__image {
+        max-height: 280px;
+        min-height: auto;
+    }
+
+    .about__image-accent {
+        top: -8px;
+        left: -8px;
+        right: 8px;
+        bottom: 8px;
+    }
+
+    .about__features-row {
+        grid-template-columns: 1fr;
+        gap: var(--spacing-md);
+        margin-top: var(--spacing-xl);
+    }
+
+    .feature-card {
+        padding: var(--spacing-lg) var(--spacing-md);
+    }
+
+    .feature-card__icon {
+        width: 56px;
+        height: 56px;
+        font-size: var(--fs-lg);
+    }
+
+    .feature-card__title {
+        font-size: var(--fs-base);
+    }
+
+    .feature-card__desc {
+        font-size: var(--fs-xs);
+    }
+
+    /* ========== Founder Mobile ========== */
     .founder__card {
         grid-template-columns: 1fr;
         text-align: center;
+        padding: var(--spacing-lg);
+        gap: var(--spacing-lg);
     }
 
     .founder__card--principal {
@@ -2472,60 +2597,125 @@ img {
     }
 
     .founder__photo {
-        height: 280px;
-        max-width: 300px;
+        height: 250px;
+        max-width: 280px;
         margin: 0 auto;
     }
 
     .founder-placeholder {
-        min-height: 280px;
-        max-width: 300px;
+        min-height: 250px;
+        max-width: 280px;
         margin: 0 auto;
     }
 
     .founder__image-border {
-        max-width: 316px;
+        max-width: 296px;
         margin: 0 auto;
     }
 
+    .founder__name {
+        font-size: var(--fs-xl);
+    }
+
+    .founder__title-role {
+        font-size: var(--fs-xs);
+    }
+
     .founder__divider {
-        margin: var(--spacing-md) auto;
+        margin: var(--spacing-sm) auto;
+    }
+
+    .founder__bio {
+        font-size: var(--fs-sm);
+        text-align: left;
+        line-height: 1.7;
     }
 
     .founder__quote {
         text-align: left;
+        padding: var(--spacing-sm) var(--spacing-md);
+        font-size: var(--fs-sm);
     }
 
-    /* Courses */
+    /* ========== Courses Mobile ========== */
     .courses__grid {
         grid-template-columns: 1fr;
     }
 
-    .about__features-row {
-        grid-template-columns: 1fr;
+    .course__card {
+        padding: var(--spacing-lg);
     }
 
+    .course__title {
+        font-size: var(--fs-lg);
+    }
+
+    .course__desc {
+        font-size: var(--fs-xs);
+        line-height: 1.7;
+    }
+
+    .course__icon-wrapper {
+        width: 52px;
+        height: 52px;
+        font-size: var(--fs-lg);
+    }
+
+    /* ========== Principal Desk Mobile ========== */
     .principal-desk {
         padding: var(--spacing-lg);
+    }
+
+    .principal-desk__title {
+        font-size: var(--fs-xl);
     }
 
     .principal-desk__message {
         padding: var(--spacing-md);
     }
 
-    /* Posters */
+    .principal-desk__message p {
+        font-size: var(--fs-sm);
+        line-height: 1.7;
+    }
+
+    /* ========== Posters Mobile ========== */
     .posters__grid {
         grid-template-columns: 1fr;
     }
 
     .poster__img {
-        height: 250px;
+        height: 220px;
     }
 
-    /* Gallery */
+    .poster__info {
+        padding: var(--spacing-md);
+    }
+
+    .poster__title {
+        font-size: var(--fs-base);
+    }
+
+    .poster__desc {
+        font-size: var(--fs-xs);
+    }
+
+    .announcement-icon-card {
+        min-height: 220px;
+    }
+
+    .announcement-icon-card i {
+        font-size: 3rem;
+    }
+
+    /* ========== Gallery Mobile ========== */
     .gallery__grid {
         grid-template-columns: repeat(2, 1fr);
-        gap: var(--spacing-sm);
+        gap: 0.5rem;
+    }
+
+    .gallery__img {
+        height: 180px;
     }
 
     .gallery-placeholder {
@@ -2547,9 +2737,9 @@ img {
     }
 
     .contact__card-icon {
-        width: 52px;
-        height: 52px;
-        font-size: var(--fs-lg);
+        width: 48px;
+        height: 48px;
+        font-size: var(--fs-base);
     }
 
     .contact__card h4 {
@@ -2562,7 +2752,6 @@ img {
 
     .contact__map-wrapper {
         padding-bottom: 75%;
-        /* taller ratio on mobile for better visibility */
     }
 
     .contact__whatsapp-cta {
@@ -2574,8 +2763,8 @@ img {
     }
 
     .whatsapp-box__icon {
-        width: 64px;
-        height: 64px;
+        width: 60px;
+        height: 60px;
         font-size: var(--fs-2xl);
     }
 
@@ -2592,26 +2781,83 @@ img {
         padding: 0.85rem 2rem;
     }
 
-    /* Footer */
-    .footer__grid {
-        grid-template-columns: 1fr;
-        gap: var(--spacing-xl);
+    /* ========== Footer Mobile ========== */
+    .footer {
+        padding: var(--spacing-xl) 0 var(--spacing-md);
     }
 
-    /* Floating elements */
+    .footer__grid {
+        grid-template-columns: 1fr;
+        gap: var(--spacing-lg);
+    }
+
+    .footer__about {
+        font-size: var(--fs-xs);
+    }
+
+    .footer__links h4,
+    .footer__contact h4 {
+        font-size: var(--fs-base);
+        margin-bottom: var(--spacing-sm);
+    }
+
+    .footer__bottom {
+        padding-top: var(--spacing-md);
+    }
+
+    .footer__bottom p {
+        font-size: var(--fs-xs);
+    }
+
+    .footer__dua {
+        font-size: var(--fs-sm);
+    }
+
+    /* ========== Floating elements ========== */
     .whatsapp-float {
-        width: 54px;
-        height: 54px;
-        font-size: 1.5rem;
-        bottom: 1.5rem;
-        right: 1.5rem;
+        width: 50px;
+        height: 50px;
+        font-size: 1.4rem;
+        bottom: 1.25rem;
+        right: 1.25rem;
     }
 
     .back-to-top {
-        width: 42px;
-        height: 42px;
-        bottom: 1.5rem;
-        left: 1.5rem;
+        width: 40px;
+        height: 40px;
+        bottom: 1.25rem;
+        left: 1.25rem;
+        font-size: var(--fs-sm);
+    }
+
+    /* ========== Lightbox Mobile ========== */
+    .lightbox__close,
+    .lightbox__prev,
+    .lightbox__next {
+        width: 40px;
+        height: 40px;
+        font-size: var(--fs-base);
+    }
+
+    .lightbox__close {
+        top: 1rem;
+        right: 1rem;
+    }
+
+    .lightbox__prev {
+        left: 0.5rem;
+    }
+
+    .lightbox__next {
+        right: 0.5rem;
+    }
+
+    .poster-lightbox__close {
+        width: 40px;
+        height: 40px;
+        top: 1rem;
+        right: 1rem;
+        font-size: var(--fs-base);
     }
 }
 
@@ -2620,46 +2866,350 @@ img {
    ============================================ */
 @media (max-width: 480px) {
     :root {
-        --fs-5xl: 2rem;
-        --fs-3xl: 1.5rem;
-        --fs-2xl: 1.3rem;
+        --fs-5xl: 1.75rem;
+        --fs-4xl: 1.5rem;
+        --fs-3xl: 1.35rem;
+        --fs-2xl: 1.15rem;
+        --fs-xl: 1.1rem;
     }
 
     .container {
-        padding: 0 1rem;
+        padding: 0 0.85rem;
+    }
+
+    /* Hero adjustments for very small screens */
+    .hero__content {
+        padding: calc(var(--header-height) + 2rem) 0.75rem 2rem;
+    }
+
+    .hero__badge {
+        font-size: var(--fs-xs);
+        padding: 0.25rem 0.85rem;
+        margin-bottom: 0.5rem;
+    }
+
+    .hero__title {
+        margin-bottom: 0.5rem;
+    }
+
+    .hero__title-line {
+        font-size: 1.5rem;
+        letter-spacing: 0;
+    }
+
+    .hero__title-sub {
+        font-size: var(--fs-sm);
+        letter-spacing: 1px;
+        margin-top: 0.15rem;
+    }
+
+    .hero__description {
+        font-size: var(--fs-xs);
+        line-height: 1.5;
+        margin-bottom: 0.75rem;
+    }
+
+    .hero__actions {
+        margin-bottom: 0.75rem;
+        gap: 0.5rem;
+    }
+
+    .hero__actions .btn {
+        padding: 0.6rem 1rem;
+        font-size: 0.65rem;
     }
 
     .hero__stats {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 0.75rem;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 0.4rem;
     }
 
     .stat {
-        padding: 0.6rem 0.4rem;
-    }
-
-    .stat__divider {
-        display: none;
+        padding: 0.5rem 0.25rem;
     }
 
     .stat__number {
+        font-size: var(--fs-lg);
+    }
+
+    .stat__plus {
+        font-size: var(--fs-sm);
+    }
+
+    .stat__label {
+        font-size: 0.55rem;
+        letter-spacing: 0.5px;
+        text-transform: uppercase;
+    }
+
+    /* About */
+    .about__image {
+        max-height: 220px;
+        min-height: auto;
+    }
+
+    .about__heading {
+        font-size: var(--fs-lg);
+    }
+
+    /* Founder */
+    .founder__card {
+        padding: var(--spacing-md);
+    }
+
+    .founder__photo {
+        height: 220px;
+        max-width: 240px;
+    }
+
+    .founder__name {
+        font-size: var(--fs-lg);
+    }
+
+    .founder__bio {
+        font-size: var(--fs-xs);
+    }
+
+    .founder__quote {
+        font-size: var(--fs-xs);
+        padding: var(--spacing-xs) var(--spacing-sm);
+    }
+
+    /* Courses */
+    .course__card {
+        padding: var(--spacing-md);
+    }
+
+    .course__title {
+        font-size: var(--fs-base);
+    }
+
+    .course__number {
+        font-size: var(--fs-2xl);
+    }
+
+    /* Principal Desk */
+    .principal-desk {
+        padding: var(--spacing-md);
+    }
+
+    .principal-desk__header {
+        gap: 0.75rem;
+    }
+
+    .principal-desk__icon {
+        width: 44px;
+        height: 44px;
+        font-size: var(--fs-base);
+    }
+
+    .principal-desk__title {
+        font-size: var(--fs-lg);
+    }
+
+    .principal-desk__message {
+        padding: var(--spacing-sm);
+    }
+
+    .principal-desk__message p {
+        font-size: var(--fs-xs);
+        line-height: 1.6;
+    }
+
+    .principal-desk__author-name {
+        font-size: var(--fs-sm);
+    }
+
+    .principal-desk__author-role {
+        font-size: 0.65rem;
+    }
+
+    /* Posters */
+    .poster__img {
+        height: 180px;
+    }
+
+    .poster__info {
+        padding: var(--spacing-sm);
+    }
+
+    .poster__badge {
+        font-size: 0.65rem;
+        padding: 0.25rem 0.75rem;
+    }
+
+    .poster__title {
+        font-size: var(--fs-sm);
+    }
+
+    .announcement-icon-card {
+        min-height: 180px;
+    }
+
+    .announcement-icon-card i {
+        font-size: 2.5rem;
+    }
+
+    /* Gallery */
+    .gallery__grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 0.4rem;
+    }
+
+    .gallery__img {
+        height: 140px;
+    }
+
+    /* Contact */
+    .contact__card {
+        padding: var(--spacing-sm);
+    }
+
+    .contact__card-icon {
+        width: 44px;
+        height: 44px;
+        font-size: var(--fs-sm);
+    }
+
+    .contact__map-wrapper {
+        padding-bottom: 85%;
+    }
+
+    .whatsapp-box {
+        padding: var(--spacing-md);
+    }
+
+    .whatsapp-box__icon {
+        width: 52px;
+        height: 52px;
         font-size: var(--fs-xl);
+    }
+
+    .whatsapp-box h3 {
+        font-size: var(--fs-base);
+    }
+
+    .btn--whatsapp {
+        font-size: var(--fs-xs);
+        padding: 0.75rem 1.5rem;
+    }
+
+    /* Footer */
+    .footer__links a {
+        font-size: var(--fs-xs);
+    }
+
+    .footer__contact-item {
+        font-size: var(--fs-xs);
+    }
+
+    .footer__contact-item i {
+        width: 30px;
+        height: 30px;
+        font-size: var(--fs-xs);
+    }
+
+    /* Lightbox for small screens */
+    .lightbox__content .image-placeholder {
+        min-width: 250px;
+        min-height: 250px;
+    }
+
+    .lightbox__prev {
+        left: 0.25rem;
+        width: 36px;
+        height: 36px;
+    }
+
+    .lightbox__next {
+        right: 0.25rem;
+        width: 36px;
+        height: 36px;
+    }
+}
+
+/* ============================================
+   RESPONSIVE — VERY SMALL MOBILE (≤ 360px)
+   ============================================ */
+@media (max-width: 360px) {
+    :root {
+        --fs-5xl: 1.5rem;
+        --fs-3xl: 1.2rem;
+        --fs-2xl: 1.05rem;
+    }
+
+    .container {
+        padding: 0 0.65rem;
+    }
+
+    .hero__content {
+        padding: calc(var(--header-height) + 1.5rem) 0.5rem 1.5rem;
+    }
+
+    .hero__badge {
+        font-size: 0.65rem;
+        padding: 0.2rem 0.7rem;
+        margin-bottom: 0.4rem;
+    }
+
+    .hero__title-line {
+        font-size: 1.3rem;
+    }
+
+    .hero__title-sub {
+        font-size: var(--fs-xs);
+    }
+
+    .hero__description {
+        font-size: 0.65rem;
+        line-height: 1.5;
+        margin-bottom: 0.5rem;
+    }
+
+    .hero__actions .btn {
+        padding: 0.5rem 0.8rem;
+        font-size: 0.6rem;
+    }
+
+    .hero__stats {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 0.3rem;
+    }
+
+    .stat {
+        padding: 0.35rem 0.2rem;
+    }
+
+    .stat__number {
+        font-size: var(--fs-base);
+    }
+
+    .stat__plus {
+        font-size: var(--fs-xs);
+    }
+
+    .stat__label {
+        font-size: 0.45rem;
+    }
+
+    .logo__name {
+        font-size: var(--fs-sm);
+    }
+
+    .logo__tagline {
+        font-size: 0.6rem;
+    }
+
+    .logo__img {
+        width: 36px;
+        height: 36px;
     }
 
     .gallery__grid {
         grid-template-columns: 1fr;
     }
 
-    .lightbox__content .image-placeholder {
-        min-width: 280px;
-        min-height: 280px;
-    }
-
-    .poster__img {
+    .gallery__img {
         height: 200px;
-    }
-
-    .poster__info {
-        padding: var(--spacing-md) var(--spacing-sm);
     }
 }
