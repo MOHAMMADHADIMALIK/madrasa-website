@@ -23,25 +23,52 @@
     <header class="header" id="header">
         <nav class="nav container">
             <a href="#home" class="nav__logo">
-                <img src="images/Logo .png" alt="Jamiatuzzahra Logo" class="logo__img">
+                <img src="images/logo.png" alt="Jamiatuzzahra Logo" class="logo__img">
                 <div class="logo__text">
-                    <span class="logo__name">Jamiatuz Zahra</span>
-                    <span class="logo__tagline">Islamic Girls' Madrasa</span>
+                    <img src="images/urdu-logo.png" alt="جامعة الزهراء" class="logo__name-img">
+                    <span class="logo__tagline">Est. 1994 · India's First Shia Girls' Madrasa</span>
                 </div>
             </a>
 
             <div class="nav__menu" id="nav-menu">
+                <!-- Sidebar Header (mobile) -->
+                <div class="nav__sidebar-header">
+                    <img src="images/logo.png" alt="Logo" class="logo__img">
+                    <div class="logo__text">
+                        <img src="images/urdu-logo.png" alt="جامعة الزهراء" class="logo__name-img">
+                        <span class="logo__tagline">Est. 1994 · India's First Shia Girls' Madrasa</span>
+                    </div>
+                </div>
                 <ul class="nav__list">
                     <li class="nav__item"><a href="#home" class="nav__link active">Home</a></li>
                     <li class="nav__item"><a href="#about" class="nav__link">About</a></li>
                     <li class="nav__item"><a href="#founder" class="nav__link">Founders</a></li>
-                    <li class="nav__item"><a href="#courses" class="nav__link">Courses</a></li>
+                    <li class="nav__item nav__dropdown">
+                        <a href="#courses" class="nav__link nav__link--dropdown">Courses <i
+                                class="fa-solid fa-chevron-down dropdown__arrow"></i></a>
+                        <ul class="dropdown__menu">
+                            <li><a href="#course-hauzawi" class="dropdown__link"><i class="fa-solid fa-book-quran"></i>
+                                    Hauzawi Course</a></li>
+                            <li><a href="#course-narjis" class="dropdown__link"><i class="fa-solid fa-scroll"></i>
+                                    Madrasa-e-Ilmiyah Narjis</a></li>
+                            <li><a href="#course-camp" class="dropdown__link"><i class="fa-solid fa-pen-fancy"></i> 40
+                                    Days Islamic Camp</a></li>
+                            <li><a href="#course-maktab" class="dropdown__link"><i class="fa-solid fa-mosque"></i>
+                                    Gahwara-e-Bibi Masooma</a></li>
+                            <li><a href="#course-muballeghaat" class="dropdown__link"><i
+                                        class="fa-solid fa-landmark"></i> Training Camp for Muballeghaat</a></li>
+                        </ul>
+                    </li>
                     <li class="nav__item"><a href="#posters" class="nav__link">Announcements</a></li>
                     <li class="nav__item"><a href="#gallery" class="nav__link">Gallery</a></li>
                     <li class="nav__item"><a href="#contact" class="nav__link">Contact Us</a></li>
                 </ul>
                 <div class="nav__close" id="nav-close">
                     <i class="fa-solid fa-xmark"></i>
+                </div>
+                <!-- Sidebar Footer (mobile) -->
+                <div class="nav__sidebar-footer">
+                    <span class="nav__sidebar-footer-text">بسم الله الرحمن الرحيم</span>
                 </div>
             </div>
 
@@ -352,8 +379,8 @@
         </div>
     </section>
 
-    <!-- ========== COURSES SECTION ========== -->
-    <section class="section courses" id="courses">
+    <!-- ========== COURSES OVERVIEW ========== -->
+    <section class="section courses-overview" id="courses">
         <div class="courses__bg-pattern"></div>
         <div class="container">
             <div class="section__header animate-on-scroll">
@@ -367,163 +394,186 @@
                     carefully planned according to age group, learning level, and commitment capacity, while maintaining
                     our core focus on discipline and tarbiyat.</p>
             </div>
+        </div>
+    </section>
 
-            <div class="courses__grid">
-                <!-- Course 1 -->
-                <div class="course__card animate-on-scroll">
-                    <div class="course__icon-wrapper">
+    <!-- ========== COURSE 1: HAUZAWI ========== -->
+    <section class="course-section course-section--1" id="course-hauzawi">
+        <div class="course-section__bg"></div>
+        <div class="container">
+            <div class="course-section__inner animate-on-scroll">
+                <div class="course-section__header">
+                    <div class="course-section__icon">
                         <i class="fa-solid fa-book-quran"></i>
                     </div>
-                    <div class="course__number">01</div>
-                    <h3 class="course__title">Jamiatuz Zahra – Hauzawi Course</h3>
-                    <p class="course__desc">The Hauzawi Course is our flagship six-year comprehensive Islamic studies
+                    <span class="course-section__number">01</span>
+                </div>
+                <div class="course-section__content">
+                    <h3 class="course-section__title">Jamiatuz Zahra – Hauzawi Course</h3>
+                    <div class="course-section__meta">
+                        <span><i class="fa-regular fa-clock"></i> 6 Years</span>
+                        <span><i class="fa-solid fa-users"></i> Age: 14–18 Years</span>
+                        <span><i class="fa-solid fa-building"></i> Fully Residential</span>
+                    </div>
+                    <p class="course-section__desc">
+                        The Hauzawi Course is our flagship six-year comprehensive Islamic studies
                         program designed for students who aspire to pursue higher religious education in a structured
-                        and disciplined residential environment.
-
-                        Duration: 6 Years
-                        Age Group: 14–18 Years
-                        System: Fully Residential (Hostel Mandatory)
-
-                        This intensive program provides in-depth study of:
-
-                        - Arabic Grammar (Nahw & Sarf)
-                        - Fiqh (Islamic Jurisprudence)
-                        - Usul
-                        - Aqaaid (Islamic Theology)
-                        - Tafseer
-                        - Akhlaq & Tarbiyat
-
-                        The residential system ensures continuous supervision, structured daily routine, and practical
-                        implementation of Islamic values — shaping not only knowledgeable students but morally upright
-                        individuals.
+                        and disciplined residential environment. This intensive program provides in-depth study of
+                        Arabic Grammar (Nahw & Sarf), Fiqh (Islamic Jurisprudence), Usul, Aqaaid (Islamic Theology),
+                        Tafseer, and Akhlaq & Tarbiyat. The residential system ensures continuous supervision,
+                        structured daily routine, and practical implementation of Islamic values — shaping not only
+                        knowledgeable students but morally upright individuals.
                     </p>
-                    <div class="course__footer">
+                    <div class="course-section__tags">
                         <span class="course__tag">Fiqh</span>
                         <span class="course__tag">Tafseer</span>
                         <span class="course__tag">Arabic Grammar</span>
-                    </div>
-                </div>
-
-                <!-- Course 2 -->
-                <div class="course__card animate-on-scroll">
-                    <div class="course__icon-wrapper course__icon--2">
-                        <i class="fa-solid fa-scroll"></i>
-                    </div>
-                    <div class="course__number">02</div>
-                    <h3 class="course__title">Madrasa-e-Ilmiyah Narjis
-                        (Daily Section of Jamiatuz Zahra)</h3>
-                    <p class="course__desc">This two-year program is designed for day scholars who wish to gain
-                        foundational Islamic knowledge without enrolling in the full residential system.
-
-                        Duration: 2 Years
-                        Age Group: 15–30 Years
-                        System: Day Scholars (Non-Residential)
-
-                        The course focuses on:
-
-                        - Basic Fiqh and Aqaaid
-                        - Qur’anic studies
-                        - Islamic manners and practical rulings
-                        - Essential religious knowledge for daily life
-
-                        It is ideal for students seeking structured Islamic education alongside their regular academic
-                        or personal commitments.</p>
-                    <div class="course__footer">
-                        <span class="course__tag">Basic Fiqh</span>
                         <span class="course__tag">Aqaaid</span>
-                        <span class="course__tag">Quranic studies</span>
-                    </div>
-                </div>
-
-                <!-- Course 3 -->
-                <div class="course__card animate-on-scroll">
-                    <div class="course__icon-wrapper course__icon--3">
-                        <i class="fa-solid fa-pen-fancy"></i>
-                    </div>
-                    <div class="course__number">03</div>
-                    <h3 class="course__title">Short-Term 40 Days Islamic Camp</h3>
-                    <p class="course__desc">This intensive short-term program is designed for individuals who wish to
-                        dedicate a focused period to spiritual growth and foundational Islamic learning.
-
-                        Duration: 40 Days
-                        Age Group: 15–30 Years
-
-                        The camp includes:
-
-                        - Daily Qur’an recitation
-                        - Basic Islamic rulings
-                        - Spiritual sessions
-                        - Akhlaq and self-development training
-                        - Structured worship routine
-
-                        It serves as a transformative experience, strengthening faith, discipline, and religious
-                        understanding within a short period..</p>
-                    <div class="course__footer">
-                        <span class="course__tag">self-development</span>
-                        <span class="course__tag">quran recitation</span>
                         <span class="course__tag">Akhlaq</span>
                     </div>
                 </div>
+            </div>
+        </div>
+    </section>
 
-                <!-- Course 4 -->
-                <div class="course__card animate-on-scroll">
-                    <div class="course__icon-wrapper course__icon--4">
+    <!-- ========== COURSE 2: NARJIS ========== -->
+    <section class="course-section course-section--2" id="course-narjis">
+        <div class="course-section__bg"></div>
+        <div class="container">
+            <div class="course-section__inner course-section__inner--reverse animate-on-scroll">
+                <div class="course-section__header">
+                    <div class="course-section__icon course-section__icon--2">
+                        <i class="fa-solid fa-scroll"></i>
+                    </div>
+                    <span class="course-section__number">02</span>
+                </div>
+                <div class="course-section__content">
+                    <h3 class="course-section__title">Madrasa-e-Ilmiyah Narjis</h3>
+                    <p class="course-section__subtitle-text">Daily Section of Jamiatuz Zahra</p>
+                    <div class="course-section__meta">
+                        <span><i class="fa-regular fa-clock"></i> 2 Years</span>
+                        <span><i class="fa-solid fa-users"></i> Age: 15–30 Years</span>
+                        <span><i class="fa-solid fa-sun"></i> Day Scholars</span>
+                    </div>
+                    <p class="course-section__desc">
+                        This two-year program is designed for day scholars who wish to gain
+                        foundational Islamic knowledge without enrolling in the full residential system.
+                        The course focuses on Basic Fiqh and Aqaaid, Qur'anic studies, Islamic manners and practical
+                        rulings, and essential religious knowledge for daily life. It is ideal for students seeking
+                        structured Islamic education alongside their regular academic or personal commitments.
+                    </p>
+                    <div class="course-section__tags">
+                        <span class="course__tag">Basic Fiqh</span>
+                        <span class="course__tag">Aqaaid</span>
+                        <span class="course__tag">Quranic Studies</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== COURSE 3: 40 DAYS CAMP ========== -->
+    <section class="course-section course-section--3" id="course-camp">
+        <div class="course-section__bg"></div>
+        <div class="container">
+            <div class="course-section__inner animate-on-scroll">
+                <div class="course-section__header">
+                    <div class="course-section__icon course-section__icon--3">
+                        <i class="fa-solid fa-pen-fancy"></i>
+                    </div>
+                    <span class="course-section__number">03</span>
+                </div>
+                <div class="course-section__content">
+                    <h3 class="course-section__title">Short-Term 40 Days Islamic Camp</h3>
+                    <div class="course-section__meta">
+                        <span><i class="fa-regular fa-clock"></i> 40 Days</span>
+                        <span><i class="fa-solid fa-users"></i> Age: 15–30 Years</span>
+                    </div>
+                    <p class="course-section__desc">
+                        This intensive short-term program is designed for individuals who wish to
+                        dedicate a focused period to spiritual growth and foundational Islamic learning.
+                        The camp includes daily Qur'an recitation, basic Islamic rulings, spiritual sessions,
+                        Akhlaq and self-development training, and structured worship routine. It serves as a
+                        transformative experience, strengthening faith, discipline, and religious understanding
+                        within a short period.
+                    </p>
+                    <div class="course-section__tags">
+                        <span class="course__tag">Self-Development</span>
+                        <span class="course__tag">Quran Recitation</span>
+                        <span class="course__tag">Akhlaq</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== COURSE 4: MAKTAB ========== -->
+    <section class="course-section course-section--4" id="course-maktab">
+        <div class="course-section__bg"></div>
+        <div class="container">
+            <div class="course-section__inner course-section__inner--reverse animate-on-scroll">
+                <div class="course-section__header">
+                    <div class="course-section__icon course-section__icon--4">
                         <i class="fa-solid fa-mosque"></i>
                     </div>
-                    <div class="course__number">04</div>
-                    <h3 class="course__title">Gahwara-e-Bibi Masooma
-                        (Maktab of Jamiatuz Zahra)</h3>
-                    <p class="course__desc">Gahwara-e-Bibi Masooma is the foundational maktab program designed for young
+                    <span class="course-section__number">04</span>
+                </div>
+                <div class="course-section__content">
+                    <h3 class="course-section__title">Gahwara-e-Bibi Masooma</h3>
+                    <p class="course-section__subtitle-text">Maktab of Jamiatuz Zahra</p>
+                    <div class="course-section__meta">
+                        <span><i class="fa-regular fa-clock"></i> 5 Years</span>
+                        <span><i class="fa-solid fa-users"></i> Age: 3–9 Years</span>
+                        <span><i class="fa-solid fa-clock"></i> Evening: 5–7 PM</span>
+                    </div>
+                    <p class="course-section__desc">
+                        Gahwara-e-Bibi Masooma is the foundational maktab program designed for young
                         girls, providing early Islamic education in a caring and structured environment.
-
-                        Duration: 5 Years
-                        Age Group: 3–9 Years
-                        Timings: Evening (5:00 PM – 7:00 PM)
-
-                        The curriculum includes:
-
-                        - Basic Qur’an learning
-                        - Duas and short surahs
-                        - Islamic manners and character building
-                        - Basic beliefs and practical teachings
-                        - Moral storytelling and foundational tarbiyat
-
-                        This program aims to build a strong Islamic foundation from early childhood, nurturing love for
-                        faith, discipline, and good character.</p>
-                    <div class="course__footer">
-                        <span class="course__tag">surahs</span>
+                        The curriculum includes basic Qur'an learning, Duas and short surahs, Islamic manners and
+                        character building, basic beliefs and practical teachings, and moral storytelling and
+                        foundational tarbiyat. This program aims to build a strong Islamic foundation from early
+                        childhood, nurturing love for faith, discipline, and good character.
+                    </p>
+                    <div class="course-section__tags">
+                        <span class="course__tag">Surahs</span>
                         <span class="course__tag">Akhlaq</span>
                         <span class="course__tag">Tarbiyyah</span>
                     </div>
                 </div>
+            </div>
+        </div>
+    </section>
 
-                <!-- Course 5 -->
-                <div class="course__card animate-on-scroll">
-                    <div class="course__icon-wrapper course__icon--5">
+    <!-- ========== COURSE 5: MUBALLEGHAAT ========== -->
+    <section class="course-section course-section--5" id="course-muballeghaat">
+        <div class="course-section__bg"></div>
+        <div class="container">
+            <div class="course-section__inner animate-on-scroll">
+                <div class="course-section__header">
+                    <div class="course-section__icon course-section__icon--5">
                         <i class="fa-solid fa-landmark"></i>
                     </div>
-                    <div class="course__number">05</div>
-                    <h3 class="course__title">Training Camp for Muballeghaat</h3>
-                    <p class="course__desc">The 40-day Deeni Ta’leemi wa Tarbiyati Training Camp is specially designed
+                    <span class="course-section__number">05</span>
+                </div>
+                <div class="course-section__content">
+                    <h3 class="course-section__title">Training Camp for Muballeghaat</h3>
+                    <div class="course-section__meta">
+                        <span><i class="fa-regular fa-clock"></i> 40 Days</span>
+                        <span><i class="fa-solid fa-chalkboard-teacher"></i> For Educators</span>
+                    </div>
+                    <p class="course-section__desc">
+                        The 40-day Deeni Ta'leemi wa Tarbiyati Training Camp is specially designed
                         for Muballeghaat and Maktab teachers who are actively engaged in religious education and
                         community service. This program serves as a refresher and professional development course to
-                        strengthen both academic understanding and practical teaching skills.
-
-                        The camp includes:
-
-                        - Revision of core Islamic sciences
-                        - Teaching methodology and classroom management
-                        - Effective communication and public speaking skills
-                        - Spiritual development and moral refinement
-                        - Practical guidance for community leadership
-
-                        This training program revitalizes dedication, enhances confidence, and equips educators with
-                        updated knowledge and refined skills, enabling them to serve their communities more effectively
-                        and professionally.</p>
-                    <div class="course__footer">
-                        <span class="course__tag">teaching methodology</span>
-                        <span class="course__tag">public speaking</span>
-                        <span class="course__tag">community leadership</span>
+                        strengthen both academic understanding and practical teaching skills. The camp includes
+                        revision of core Islamic sciences, teaching methodology and classroom management, effective
+                        communication and public speaking skills, spiritual development and moral refinement, and
+                        practical guidance for community leadership.
+                    </p>
+                    <div class="course-section__tags">
+                        <span class="course__tag">Teaching Methodology</span>
+                        <span class="course__tag">Public Speaking</span>
+                        <span class="course__tag">Community Leadership</span>
                     </div>
                 </div>
             </div>
@@ -847,7 +897,7 @@
                         </div>
                         <h4>WhatsApp</h4>
                         <p>Message us directly</p>
-                        <a href="tel:9554487786" class="contact__link">+91 7266061191</a>
+                        <a href="tel:9554487786" class="contact__link">+91 9554487786</a>
                     </div>
 
                     <div class="contact__card contact__card--map">
@@ -876,7 +926,7 @@
                         <h3>Chat With Us on WhatsApp</h3>
                         <p>Have questions about admissions or want to learn more? Chat with us directly on WhatsApp for
                             a quick response.</p>
-                        <a href="https://wa.me/9554487786?text=Assalamu%20Alaikum%2C%20I%20would%20like%20to%20know%20more%20about%20Jamiatuzzahra."
+                        <a href="https://wa.me/9554487786?text=Salamun%20Alaikum%2C%20I%20would%20like%20to%20know%20more%20about%20Jamiatuzzahra."
                             class="btn btn--whatsapp" target="_blank" rel="noopener">
                             <i class="fa-brands fa-whatsapp"></i>
                             <span>Open WhatsApp</span>
@@ -894,9 +944,10 @@
             <div class="footer__grid">
                 <div class="footer__brand">
                     <div class="footer__logo">
-                        <img src="images/Logo .png" alt="Jamiatuzzahra Logo" class="logo__img logo__img--footer">
+                        <img src="images/logo.png" alt="Jamiatuzzahra Logo" class="logo__img logo__img--footer">
                         <div class="logo__text">
-                            <span class="logo__name">Jamiatuz zahra</span>
+                            <img src="images/urdu-logo.png" alt="جامعة الزهراء"
+                                class="logo__name-img logo__name-img--footer">
                             <span class="logo__tagline">Islamic Girls' Madrasa</span>
                         </div>
                     </div>
@@ -943,7 +994,7 @@
     </footer>
 
     <!-- Floating WhatsApp Button -->
-    <a href="https://wa.me/9554487786?text=Assalamu%20Alaikum%2C%20I%20would%20like%20to%20know%20more%20about%20Jamiatuzzahra."
+    <a href="https://wa.me/9554487786?text=Salamun%20Alaikum%2C%20I%20would%20like%20to%20know%20more%20about%20Jamiatuzzahra."
         class="whatsapp-float" target="_blank" rel="noopener" aria-label="Chat on WhatsApp">
         <i class="fa-brands fa-whatsapp"></i>
     </a>

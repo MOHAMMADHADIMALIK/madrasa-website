@@ -27,13 +27,13 @@ document.addEventListener('DOMContentLoaded', () => {
     function openNav() {
         navMenu.classList.add('show');
         document.body.style.overflow = 'hidden';
-        if (navToggle) navToggle.style.display = 'none';
+        if (navToggle) navToggle.classList.add('hidden');
     }
 
     function closeNav() {
         navMenu.classList.remove('show');
         document.body.style.overflow = '';
-        if (navToggle) navToggle.style.display = '';
+        if (navToggle) navToggle.classList.remove('hidden');
     }
 
     if (navToggle) navToggle.addEventListener('click', openNav);
@@ -41,8 +41,31 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Close nav on link click
     navLinks.forEach(link => {
+        link.addEventListener('click', (e) => {
+            // Don't close nav if clicking the dropdown toggle
+            if (link.classList.contains('nav__link--dropdown')) return;
+            closeNav();
+        });
+    });
+
+    // Close nav on dropdown link click
+    document.querySelectorAll('.dropdown__link').forEach(link => {
         link.addEventListener('click', closeNav);
     });
+
+    // Mobile dropdown toggle
+    const dropdownToggle = document.querySelector('.nav__link--dropdown');
+    const dropdownParent = document.querySelector('.nav__dropdown');
+
+    if (dropdownToggle && dropdownParent) {
+        dropdownToggle.addEventListener('click', (e) => {
+            // Only toggle on mobile (when nav menu is in mobile mode)
+            if (window.innerWidth <= 768) {
+                e.preventDefault();
+                dropdownParent.classList.toggle('active');
+            }
+        });
+    }
 
     // Close nav on outside click
     document.addEventListener('click', (e) => {
