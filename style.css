@@ -34,6 +34,7 @@
     --ff-heading: 'Playfair Display', Georgia, serif;
     --ff-body: 'Inter', -apple-system, sans-serif;
     --ff-arabic: 'Amiri', serif;
+    --ff-info: 'NewsGoth Cn BT', 'News Gothic', 'Helvetica Neue', Arial, sans-serif;
 
     /* Sizes */
     --fs-xs: 0.75rem;
@@ -187,6 +188,7 @@ img {
 }
 
 .section__description {
+    font-family: var(--ff-info);
     font-size: var(--fs-md);
     color: var(--clr-text-light);
     max-width: 600px;
@@ -342,8 +344,14 @@ img {
     font-family: var(--ff-heading);
     font-size: var(--fs-lg);
     font-weight: 700;
-    color: var(--clr-white);
+    color: var(--clr-accent);
     line-height: 1.1;
+    white-space: nowrap;
+    letter-spacing: 0.5px;
+}
+
+.logo__name--footer {
+    font-size: var(--fs-base);
 }
 
 .logo__name-img {
@@ -416,6 +424,14 @@ img {
     display: inline-flex;
     align-items: center;
     gap: 0.35rem;
+}
+
+/* Ensure Courses link is full-width & aligned on mobile/tablet sidebar */
+@media (max-width: 992px) {
+    .nav__link--dropdown {
+        display: flex;
+        width: 100%;
+    }
 }
 
 .dropdown__arrow {
@@ -646,6 +662,7 @@ img {
 }
 
 .hero__description {
+    font-family: var(--ff-info);
     font-size: var(--fs-md);
     color: rgba(255, 255, 255, 0.8);
     max-width: 650px;
@@ -848,6 +865,7 @@ img {
 }
 
 .about__text {
+    font-family: var(--ff-info);
     font-size: var(--fs-base);
     color: var(--clr-text-light);
     margin-bottom: var(--spacing-sm);
@@ -937,6 +955,7 @@ img {
 }
 
 .feature-card__desc {
+    font-family: var(--ff-info);
     font-size: var(--fs-sm);
     color: var(--clr-text-muted);
     line-height: 1.7;
@@ -1160,6 +1179,7 @@ img {
 }
 
 .course-section__desc {
+    font-family: var(--ff-info);
     font-size: var(--fs-base);
     color: var(--clr-text-light);
     line-height: 1.85;
@@ -1312,6 +1332,7 @@ img {
 }
 
 .founder__bio {
+    font-family: var(--ff-info);
     font-size: var(--fs-base);
     color: var(--clr-text-light);
     line-height: 1.8;
@@ -1508,6 +1529,7 @@ img {
 }
 
 .poster__desc {
+    font-family: var(--ff-info);
     font-size: var(--fs-sm);
     color: var(--clr-text-muted);
     line-height: 1.7;
@@ -1842,6 +1864,7 @@ img {
 }
 
 .contact__card p {
+    font-family: var(--ff-info);
     font-size: var(--fs-sm);
     color: var(--clr-text-muted);
     margin-bottom: 0.75rem;
@@ -1930,6 +1953,7 @@ img {
 }
 
 .whatsapp-box p {
+    font-family: var(--ff-info);
     font-size: var(--fs-sm);
     color: rgba(255, 255, 255, 0.75);
     line-height: 1.7;
@@ -1970,6 +1994,7 @@ img {
 }
 
 .footer__about {
+    font-family: var(--ff-info);
     font-size: var(--fs-sm);
     line-height: 1.8;
     color: rgba(255, 255, 255, 0.6);
@@ -2216,7 +2241,7 @@ img {
 }
 
 .principal-desk__message p {
-    font-family: var(--ff-body);
+    font-family: var(--ff-info);
     font-size: var(--fs-base);
     color: rgba(255, 255, 255, 0.85);
     line-height: 1.9;
@@ -2496,41 +2521,8 @@ img {
         grid-template-columns: 1fr 1fr;
         gap: var(--spacing-xl);
     }
-}
 
-/* ============================================
-   RESPONSIVE — MOBILE (≤ 768px)
-   ============================================ */
-@media (max-width: 768px) {
-    :root {
-        --fs-5xl: 2.5rem;
-        --fs-4xl: 2rem;
-        --fs-3xl: 1.6rem;
-        --fs-2xl: 1.35rem;
-        --fs-xl: 1.25rem;
-        --header-height: 65px;
-        --spacing-2xl: 3.5rem;
-        --spacing-3xl: 5rem;
-    }
-
-    .section {
-        padding: var(--spacing-2xl) 0;
-    }
-
-    .section__header {
-        margin-bottom: var(--spacing-xl);
-    }
-
-    .section__title {
-        font-size: var(--fs-2xl);
-    }
-
-    .section__description {
-        font-size: var(--fs-sm);
-        max-width: 100%;
-    }
-
-    /* ========== Premium Mobile Nav ========== */
+    /* ========== Premium Mobile/Tablet Nav (sidebar) ========== */
     .nav__menu {
         position: fixed;
         top: 0;
@@ -2612,8 +2604,8 @@ img {
         flex-direction: column;
     }
 
-    .nav__sidebar-header .logo__name-img {
-        height: 24px;
+    .nav__sidebar-header .logo__name {
+        font-size: var(--fs-base);
     }
 
     .nav__sidebar-header .logo__tagline {
@@ -2637,6 +2629,7 @@ img {
     .nav__link {
         display: flex;
         align-items: center;
+        justify-content: center;
         padding: 0.9rem 1.25rem;
         font-size: 0.95rem;
         font-weight: 500;
@@ -2706,7 +2699,7 @@ img {
         padding: 0.4rem 0.5rem;
     }
 
-    /* Override desktop hover rule — prevents translateX(-50%) shift on mobile touch */
+    /* Override desktop hover rule */
     .nav__dropdown:hover .dropdown__menu,
     .nav__dropdown.active .dropdown__menu,
     .nav__dropdown .dropdown__menu {
@@ -2770,14 +2763,14 @@ img {
         pointer-events: none;
     }
 
-    /* ========== Mobile Header Logo Fix ========== */
+    /* ========== Header Logo Fix ========== */
     .nav__logo .logo__img {
         width: 38px;
         height: 38px;
     }
 
-    .nav__logo .logo__name-img {
-        height: 22px;
+    .nav__logo .logo__name {
+        font-size: var(--fs-sm);
     }
 
     .nav__logo .logo__tagline {
@@ -2829,6 +2822,39 @@ img {
         font-size: 0.85rem;
         color: rgba(212, 168, 83, 0.5);
         letter-spacing: 1px;
+    }
+}
+
+/* ============================================
+   RESPONSIVE — MOBILE (≤ 768px)
+   ============================================ */
+@media (max-width: 768px) {
+    :root {
+        --fs-5xl: 2.5rem;
+        --fs-4xl: 2rem;
+        --fs-3xl: 1.6rem;
+        --fs-2xl: 1.35rem;
+        --fs-xl: 1.25rem;
+        --header-height: 65px;
+        --spacing-2xl: 3.5rem;
+        --spacing-3xl: 5rem;
+    }
+
+    .section {
+        padding: var(--spacing-2xl) 0;
+    }
+
+    .section__header {
+        margin-bottom: var(--spacing-xl);
+    }
+
+    .section__title {
+        font-size: var(--fs-2xl);
+    }
+
+    .section__description {
+        font-size: var(--fs-sm);
+        max-width: 100%;
     }
 
     /* ========== Hero Mobile ========== */

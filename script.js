@@ -60,7 +60,7 @@ document.addEventListener('DOMContentLoaded', () => {
     if (dropdownToggle && dropdownParent) {
         dropdownToggle.addEventListener('click', (e) => {
             // Only toggle on mobile (when nav menu is in mobile mode)
-            if (window.innerWidth <= 768) {
+            if (window.innerWidth <= 992) {
                 e.preventDefault();
                 dropdownParent.classList.toggle('active');
             }
