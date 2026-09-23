@@ -19,11 +19,34 @@
 
 <body>
 
+    <!-- ========== POPUP MODAL (ISMAT COURSE ANNOUNCEMENT) ========== -->
+    <div class="popup-modal" id="popup-modal" role="dialog" aria-modal="true" aria-label="Important Announcement">
+        <div class="popup-modal__overlay" id="popup-overlay"></div>
+        <div class="popup-modal__content">
+            <div class="popup-modal__frame">
+                <button class="popup-modal__close" id="popup-close" aria-label="Close popup">
+                    <i class="fa-solid fa-xmark"></i>
+                </button>
+                <img src="images/ismat.jpeg" alt="Ismat Short-Term Course – Winter Camp 2026" class="popup-modal__img" id="popup-img" title="Click to view full poster">
+            </div>
+            <div class="popup-modal__actions">
+                <button type="button" class="popup-action-btn popup-action-btn--zoom" id="popup-zoom-btn" title="View poster in high resolution">
+                    <i class="fa-solid fa-magnifying-glass-plus"></i>
+                    <span>Full Poster</span>
+                </button>
+                <a href="https://wa.me/9554487786?text=Salamun%20Alaikum%2C%20I%20would%20like%20to%20register%20for%20the%20Ismat%20Short-Term%20Course." target="_blank" rel="noopener" class="popup-action-btn popup-action-btn--wa">
+                    <i class="fa-brands fa-whatsapp"></i>
+                    <span>Inquire Now</span>
+                </a>
+            </div>
+        </div>
+    </div>
+
     <!-- ========== HEADER / NAVIGATION ========== -->
     <header class="header" id="header">
         <nav class="nav container">
             <a href="#home" class="nav__logo">
-                <img src="images/logo.png" alt="Jamiatuzzahra Logo" class="logo__img">
+                <img src="images/logo.jpeg" alt="Jamiatuzzahra Logo" class="logo__img">
                 <div class="logo__text">
                     <span class="logo__name">Jamiatuz Zahra</span>
                     <span class="logo__tagline">Est. 1994 · India's First Shia Girls' Madrasa</span>
@@ -33,7 +56,7 @@
             <div class="nav__menu" id="nav-menu">
                 <!-- Sidebar Header (mobile) -->
                 <div class="nav__sidebar-header">
-                    <img src="images/logo.png" alt="Logo" class="logo__img">
+                    <img src="images/logo.jpeg" alt="Logo" class="logo__img">
                     <div class="logo__text">
                         <span class="logo__name">Jamiatuz Zahra</span>
                         <span class="logo__tagline">Est. 1994 · India's First Shia Girls' Madrasa</span>
@@ -51,8 +74,8 @@
                                     Hauzawi Course</a></li>
                             <li><a href="#course-narjis" class="dropdown__link"><i class="fa-solid fa-scroll"></i>
                                     Madrasa-e-Ilmiyah Narjis</a></li>
-                            <li><a href="#course-camp" class="dropdown__link"><i class="fa-solid fa-pen-fancy"></i> 40
-                                    Days Islamic Camp</a></li>
+                            <li><a href="#course-camp" class="dropdown__link"><i class="fa-solid fa-pen-fancy"></i>
+                                    Ismat Short-Term Course</a></li>
                             <li><a href="#course-maktab" class="dropdown__link"><i class="fa-solid fa-mosque"></i>
                                     Gahwara-e-Bibi Masooma</a></li>
                             <li><a href="#course-muballeghaat" class="dropdown__link"><i
@@ -472,7 +495,7 @@
         </div>
     </section>
 
-    <!-- ========== COURSE 3: 40 DAYS CAMP ========== -->
+    <!-- ========== COURSE 3: ISMAT SHORT-TERM COURSE ========== -->
     <section class="course-section course-section--3" id="course-camp">
         <div class="course-section__bg"></div>
         <div class="container">
@@ -484,23 +507,30 @@
                     <span class="course-section__number">03</span>
                 </div>
                 <div class="course-section__content">
-                    <h3 class="course-section__title">Short-Term 40 Days Islamic Camp</h3>
+                    <div class="course-section__badge-row">
+                        <span class="course__badge course__badge--featured"><i class="fa-solid fa-sparkles"></i> Winter Camp 2026 · Admissions Open</span>
+                    </div>
+                    <h3 class="course-section__title">Ismat Short-Term Course</h3>
+                    <p class="course-section__subtitle-text">Winter Camp 2026 · Intensive Spiritual & Islamic Learning</p>
                     <div class="course-section__meta">
+                        <span><i class="fa-regular fa-calendar-check"></i> 1 Nov – 10 Dec 2026</span>
                         <span><i class="fa-regular fa-clock"></i> 40 Days</span>
                         <span><i class="fa-solid fa-users"></i> Age: 15–30 Years</span>
+                        <span><i class="fa-solid fa-indian-rupee-sign"></i> Fee: ₹3,000/-</span>
                     </div>
                     <p class="course-section__desc">
-                        This intensive short-term program is designed for individuals who wish to
-                        dedicate a focused period to spiritual growth and foundational Islamic learning.
-                        The camp includes daily Qur'an recitation, basic Islamic rulings, spiritual sessions,
-                        Akhlaq and self-development training, and structured worship routine. It serves as a
-                        transformative experience, strengthening faith, discipline, and religious understanding
-                        within a short period.
+                        This intensive 40-day short-term program is designed for girls and young women who wish to
+                        dedicate a focused period to spiritual growth, moral refinement, and foundational Islamic learning.
+                        The camp includes daily Qur'an recitation with Tajweed, basic Islamic rulings (Ahkam & Fiqh),
+                        spiritual purification sessions, Akhlaq and self-development training, and a structured daily worship routine.
+                        It serves as a transformative experience, strengthening faith, discipline, and religious understanding.
                     </p>
                     <div class="course-section__tags">
-                        <span class="course__tag">Self-Development</span>
+                        <span class="course__tag">Winter Camp</span>
+                        <span class="course__tag">Fiqh & Ahkam</span>
                         <span class="course__tag">Quran Recitation</span>
-                        <span class="course__tag">Akhlaq</span>
+                        <span class="course__tag">Akhlaq & Tarbiyat</span>
+                        <span class="course__tag">Self-Development</span>
                     </div>
                 </div>
             </div>
@@ -669,30 +699,32 @@
                     </div>
                 </div>
 
-                <!-- Poster 3 - Important Announcement -->
+                <!-- Poster 3 - Ismat Course Announcement -->
                 <div class="poster__card animate-on-scroll">
-                    <div class="poster__image-wrapper">
-                        <div class="announcement-icon-card">
-                            <div class="announcement-icon-card__bg"></div>
-                            <div class="announcement-icon-card__pulse"></div>
-                            <i class="fa-solid fa-bullhorn"></i>
-                            <span>Important Notice</span>
+                    <div class="poster__image-wrapper" data-poster-src="images/ismat.jpeg">
+                        <img src="images/ismat.jpeg" alt="Ismat Short-Term Course - Winter Camp 2026" class="poster__img">
+                        <div class="poster__zoom-overlay">
+                            <i class="fa-solid fa-search-plus"></i>
+                            <span>View Full Poster</span>
                         </div>
                     </div>
                     <div class="poster__info">
-                        <span class="poster__badge poster__badge--notice"><i class="fa-solid fa-bell"></i> Notice</span>
-                        <h4 class="poster__title">Important Announcement</h4>
+                        <span class="poster__badge poster__badge--notice"><i class="fa-solid fa-sparkles"></i> Winter Camp 2026</span>
+                        <h4 class="poster__title">Ismat Short-Term Course</h4>
                         <div class="poster__desc-wrapper">
-                            <p class="poster__desc poster__desc--truncated">This section provides timely updates and
-                                essential information regarding academic activities, institutional policies, hostel
-                                guidelines, examinations, events, and other important matters.</p>
+                            <p class="poster__desc poster__desc--truncated">Jamiatuz Zahra announces the Ismat Short-Term Course (Winter Camp 2026) — an intensive 40-day spiritual, educational, and character-building camp for young women.</p>
                             <div class="poster__desc-full" style="display:none;">
-                                <p class="poster__desc">Parents and students are strongly advised to check this section
-                                    regularly to stay informed about: admission-related updates, examination schedules
-                                    and results, academic calendar notices, hostel regulations, annual events, holiday
-                                    notifications, and policy changes.</p>
-                                <p class="poster__desc">All official updates will be published here to ensure clarity,
-                                    transparency, and smooth coordination between the administration and parents.</p>
+                                <p class="poster__desc"><strong>Duration:</strong> 1 Nov. 2026 – 10 Dec. 2026 (40 Days)</p>
+                                <p class="poster__desc"><strong>Registration Fee:</strong> ₹3,000/- (Non-Refundable)</p>
+                                <p class="poster__desc"><strong>Eligibility Criteria:</strong></p>
+                                <ul style="margin-left: 1.2rem; margin-bottom: 0.75rem; list-style: disc;">
+                                    <li>Age: 15 to 30 years</li>
+                                    <li>Must have passed High School</li>
+                                    <li>Must be able to read and write Urdu</li>
+                                    <li>Must be unmarried</li>
+                                </ul>
+                                <p class="poster__desc"><strong>Required Documents:</strong> Registration Form • High School Marksheet • Aadhaar Card • Passport-size Photograph with Hijab.</p>
+                                <p class="poster__desc">Seats are strictly limited. Direct admissions are open on merit.</p>
                             </div>
                         </div>
                         <button class="poster__read-more"
@@ -944,7 +976,7 @@
             <div class="footer__grid">
                 <div class="footer__brand">
                     <div class="footer__logo">
-                        <img src="images/logo.png" alt="Jamiatuzzahra Logo" class="logo__img logo__img--footer">
+                        <img src="images/logo.jpeg" alt="Jamiatuzzahra Logo" class="logo__img logo__img--footer">
                         <div class="logo__text">
                             <span class="logo__name logo__name--footer">Jamiatuz Zahra</span>
                             <span class="logo__tagline">Islamic Girls' Madrasa</span>

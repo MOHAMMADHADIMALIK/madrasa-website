@@ -352,4 +352,59 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
+    // ==========================================
+    // Popup Modal on Page Load
+    // ==========================================
+    const popupModal = document.getElementById('popup-modal');
+    const popupClose = document.getElementById('popup-close');
+    const popupOverlay = document.getElementById('popup-overlay');
+    const popupImg = document.getElementById('popup-img');
+    const popupZoomBtn = document.getElementById('popup-zoom-btn');
+
+    function closePopup() {
+        if (popupModal) {
+            popupModal.classList.add('hidden');
+            document.body.style.overflow = '';
+        }
+    }
+
+    function openPosterZoom(src) {
+        if (posterLightbox && posterLightboxImg) {
+            posterLightboxImg.src = src;
+            posterLightbox.classList.add('active');
+            document.body.style.overflow = 'hidden';
+        }
+    }
+
+    if (popupModal) {
+        // Lock scroll while popup is active
+        document.body.style.overflow = 'hidden';
+
+        if (popupClose) popupClose.addEventListener('click', closePopup);
+        if (popupOverlay) popupOverlay.addEventListener('click', closePopup);
+
+        // Click on popup image or "Full Poster" button to open high-res lightbox view
+        if (popupImg) {
+            popupImg.addEventListener('click', () => {
+                openPosterZoom(popupImg.src);
+            });
+        }
+        if (popupZoomBtn) {
+            popupZoomBtn.addEventListener('click', () => {
+                const src = popupImg ? popupImg.src : 'images/ismat.jpeg';
+                openPosterZoom(src);
+            });
+        }
+
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape') {
+                if (posterLightbox && posterLightbox.classList.contains('active')) {
+                    closePosterLightbox();
+                } else if (popupModal && !popupModal.classList.contains('hidden')) {
+                    closePopup();
+                }
+            }
+        });
+    }
+
 });
